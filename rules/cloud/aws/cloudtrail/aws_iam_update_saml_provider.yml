@@ -1,0 +1,17 @@
+title: AWS IAM UpdateSAMLProvider
+id: 91a181a1-3b06-468c-9a11-bdb70ebc3325
+status: test
+description: detects updates to the SAML provider for AWS SSO
+author: Crowdalert, Inc
+date: 2024/06/19
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+  selection:
+    eventSource: iam.amazonaws.com
+    eventName: UpdateSAMLProvider
+  condition: selection
+tags:
+  - attack.t1078
+level: high

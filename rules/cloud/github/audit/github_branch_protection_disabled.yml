@@ -1,0 +1,20 @@
+title: Github branch protection disabled
+id: e12ab047-ab94-41b7-a50a-de7d40e60636
+status: stable
+description: Detects branch protection rules on a protected repository being disabled by an admin
+author: Crowdalert, Inc
+date: 2024/04/03
+tags:
+  - attack.defense_evasion
+  - attack.t1562.001
+logsource:
+  product: github
+  service: audit
+detection:
+  selection:
+    action: protected_branch.destroy
+  condition: selection
+fields:
+  - repo
+level: high
+message: Github branch protection disabled by {{ actor }}

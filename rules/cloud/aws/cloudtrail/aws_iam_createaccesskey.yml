@@ -1,0 +1,23 @@
+title: AWS IAM CreateAccessKey
+id: 98e25b8c-075d-42d4-8fc6-e0cc9ad34f73
+status: test
+description: detects when an AWS access key is created
+author: Crowdalert, Inc
+date: 2024/06/19
+tags:
+  - attack.t1136.003
+  - attack.t1136
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection:
+      eventName: CreateAccessKey
+    condition: selection
+fields:
+  - requestParameters.userName
+falsepositives:
+  - AWS admin creating access keys legitimately
+level: medium
+message: |
+  access key created for user {{ api.request.data.userName }}

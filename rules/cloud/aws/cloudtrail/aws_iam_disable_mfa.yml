@@ -1,0 +1,23 @@
+title: AWS IAM Disable MFA
+id: 0e456158-da62-4f93-bd31-1fcf857c6a20
+status: test
+description: detects defense evasion by disabling MFA for a user
+author: Crowdalert, Inc
+date: 2024/06/19
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+  selection:
+    eventSource: iam.amazonaws.com
+    eventName:
+      - DeleteVirtualMFADevice
+      - DeactivateMFADevice
+  condition: selection
+tags:
+  - attack.t1586
+  - attack.t1586.003
+  - attack.t1621
+  - attack.t1556
+  - attack.t1556.006
+level: medium

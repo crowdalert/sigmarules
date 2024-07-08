@@ -1,0 +1,21 @@
+title: Github branch protection policy override
+id: abd1855e-70b9-4f47-9d63-6e572067ba91
+status: stable
+description: Detects branch protection rules on a protected repository bypassed by an admin
+author: Crowdalert, Inc
+date: 2024/03/11
+tags:
+  - attack.persistence
+  - attack.defense_evasion
+  - attack.t1548.005
+logsource:
+  product: github
+  service: audit
+detection:
+  selection:
+    action: protected_branch.policy_override
+  condition: selection
+fields:
+  - repo
+level: high
+message: Branch protection bypassed by {{ actor }}

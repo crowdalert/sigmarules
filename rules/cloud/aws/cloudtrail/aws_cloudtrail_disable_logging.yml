@@ -1,0 +1,20 @@
+title: AWS CloudTrail Disable Logging
+id: 036f9d0e-e191-4143-9623-03827f22982d
+status: test
+description: detects defense evasion by disabling CloudTrail logging
+author: Crowdalert, Inc
+date: 2024/06/19
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+  selection:
+    eventSource: cloudtrail.amazonaws.com
+    eventName:
+      - DeleteTrail
+      - StopLogging
+  condition: selection
+tags:
+  - attack.t1562.008
+  - attack.t1562
+level: high

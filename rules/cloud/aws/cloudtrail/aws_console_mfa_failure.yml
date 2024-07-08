@@ -1,0 +1,26 @@
+title: AWS Console Login with MFA Failure
+id: 609d2a0a-cfe9-4b40-b728-3657892427e4
+status: test
+description: detects login to the AWS console that succeed with password but fail at
+  the MFA step
+references:
+  - https://aws.amazon.com/what-is/mfa/
+author: Crowdalert, Inc
+date: 2024/06/19
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+  selection:
+    eventName: ConsoleLogin
+    errorMessage: "Failed authentication"
+    additionalEventData.MFAUsed: "Yes"
+  condition: selection
+tags:
+  - attack.t1586
+  - attack.t1586.003
+  - attack.1621
+  - detection.risk
+level: low
+risk:
+  score: 20

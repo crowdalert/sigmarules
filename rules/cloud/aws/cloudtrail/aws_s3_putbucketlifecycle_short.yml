@@ -1,0 +1,24 @@
+title: AWS S3 short PutBucketLifecycle
+id: cd25655d-171e-4dae-8802-6510d9a8153f
+status: test
+description: |
+  detects defense evasion setting a short lifecycle on an S3 bucket.
+  An attacker can evade detection by setting short lifecycles on Cloudtrail
+  or Cloudwatch S3 buckets
+author: Crowdalert, Inc
+date: 2024/06/19
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+  selection:
+    eventSource: s3.amazonaws.com
+    eventName: PutBucketLifecycle
+    requestParameters.LifecycleConfiguration.Rule.Expiration.Days|lt: 2
+  condition: selection
+tags:
+  - attack.t1562
+  - attack.t1562.008
+level: medium
+message: |
+  short bucket lifecycle for S3 bucket {{ resources.name }} set

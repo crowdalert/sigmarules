@@ -1,0 +1,21 @@
+title: AWS EKS CreateRole
+id: 2cdbf717-5c14-4c1e-872f-6ca40b59e382
+status: test
+description: |
+  Detects creation of a role in EKS with different IAM policies than available
+  in AWS
+author: Crowdalert, Inc
+date: 2024/06/19
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+  selection:
+    eventSource: eks.amazonaws.com
+    eventName: CreateRole
+    requestParameters.description|startswith: Allows
+  condition: selection
+tags:
+  - attack.t1562.008
+  - attack.t1562
+level: medium

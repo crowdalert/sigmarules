@@ -1,0 +1,23 @@
+title: AWS Network ACL created with all open ports
+id: 7b9be280-4610-4676-995f-996c03b49485
+status: test
+description: detects a network ACL rule that allows all traffic
+author: Crowdalert, Inc
+date: 2024/06/19
+tags:
+  - attack.t1078.004
+  - attack.t1078
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection:
+      eventName:
+        - CreateNetworkAclEntry
+        - ReplaceNetworkAclEntry
+      eventSource: ec2.amazonaws.com
+      requestParameters.ruleAction: allow
+      requestParameters.portRange.from: 0
+      requestParameters.portRange.to: 65535
+    condition: selection
+level: medium

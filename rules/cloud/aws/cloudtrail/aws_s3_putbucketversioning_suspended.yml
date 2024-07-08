@@ -1,0 +1,20 @@
+title: AWS S3 PutBucketVersioning Suspended
+id: 6a2b3681-4c42-47d7-aa90-c404325e388b
+status: test
+description: detects disabling versioning on an S3 bucket
+author: Crowdalert, Inc
+date: 2024/06/19
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+  selection:
+    eventSource: s3.amazonaws.com
+    eventName: PutBucketVersioning
+    requestParameters.VersioningConfiguration.Status: Suspended
+  condition: selection
+tags:
+  - attack.t1490
+level: medium
+message: |
+  bucket versioning suspended for S3 bucket {{ resources.name }}
