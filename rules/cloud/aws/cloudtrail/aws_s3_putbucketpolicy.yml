@@ -1,0 +1,18 @@
+title: AWS S3 PutBucketPolicy
+id: add3c4b0-33f0-4031-82ea-9846f81a8de6
+status: test
+description: Detects updates to an S3 bucket policy
+author: Crowdalert, Inc
+date: 2024/06/19
+logsource:
+  product: aws
+  service: cloudtrail
+detection:
+  selection:
+    eventName: PutBucketPolicy
+  condition: selection
+tags:
+  - attack.t1565
+  - attack.t1565.001
+level: high
+message: updated S3 bucket policy

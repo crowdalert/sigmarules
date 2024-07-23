@@ -18,4 +18,4 @@ detection:
 fields:
   - repo
 level: high
-message: Branch protection bypassed by {{ actor }}
+message: Branch protection bypassed by {actor}

@@ -17,4 +17,4 @@ detection:
 fields:
   - repo
 level: high
-message: Github branch protection disabled by {{ actor }}
+message: Github branch protection disabled by {actor}
