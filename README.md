@@ -20,7 +20,7 @@ These will appear in the rules' `custom_attributes` fields to be used in a Sigma
 
 - `risk`: a dict field intended for more expressive control over risk scoring and objects than high/medium/low allows. for instance `score` to indicate a numerical risk score for use in risk-based alerting
 
-- `message`: a message to display to the analyst or user receiving an alert. May use `{{ }}` template delimiters to reference fields within the log event
+- `message`: a message to display to the analyst or user receiving an alert. May use moustache (`{{ }}`) template delimiters to reference fields within the log event
 
 ## Taxonomy
 
