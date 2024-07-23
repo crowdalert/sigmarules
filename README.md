@@ -22,10 +22,6 @@ These will appear in the rules' `custom_attributes` fields to be used in a Sigma
 
 - `message`: a message to display to the analyst or user receiving an alert. May use `{{ }}` template delimiters to reference fields within the log event
 
-### Tag Namespaces
-
-- `detection`: A classification of the detection. For action routing. _eg_ `detection.risk` to apply a risk score  
-
 ## Taxonomy
 
 Rules are found in the `rules` folder and generally follow [SigmaHQ filename conventions](https://github.com/SigmaHQ/sigma-specification/blob/main/sigmahq/Sigmahq_filename_rule.md)

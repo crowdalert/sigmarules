@@ -16,5 +16,4 @@ detection:
 tags:
   - attack.t1490
 level: medium
-message: |
-  bucket versioning suspended for S3 bucket {{ resources.name }}
+message: bucket versioning suspended for S3 bucket
