@@ -3,7 +3,7 @@ id: 6a2b3681-4c42-47d7-aa90-c404325e388b
 status: test
 description: detects disabling versioning on an S3 bucket
 author: Crowdalert, Inc
-date: 2024/06/19
+date: 2024-06-19
 logsource:
     product: aws
     service: cloudtrail

@@ -5,7 +5,7 @@ description: |
   Detects creation of a role in EKS with different IAM policies than available
   in AWS
 author: Crowdalert, Inc
-date: 2024/06/19
+date: 2024-06-19
 logsource:
     product: aws
     service: cloudtrail

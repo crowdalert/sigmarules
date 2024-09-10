@@ -6,7 +6,7 @@ description: |
   An attacker can evade detection by setting short lifecycles on Cloudtrail
   or Cloudwatch S3 buckets
 author: Crowdalert, Inc
-date: 2024/06/19
+date: 2024-06-19
 logsource:
     product: aws
     service: cloudtrail

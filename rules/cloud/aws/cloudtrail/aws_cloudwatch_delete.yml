@@ -3,7 +3,7 @@ id: 31989d83-d2b6-40ed-83f8-045134c064f9
 status: test
 description: detects defense evasion by deleting a cloudwatch log group
 author: Crowdalert, Inc
-date: 2024/06/19
+date: 2024-06-19
 logsource:
     product: aws
     service: cloudtrail

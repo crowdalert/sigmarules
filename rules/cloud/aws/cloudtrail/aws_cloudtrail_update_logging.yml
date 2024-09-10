@@ -3,7 +3,7 @@ id: c122cb0a-c42a-4d40-bdb0-01693e6914a3
 status: test
 description: detects defense evasion by updating CloudTrail logging
 author: Crowdalert, Inc
-date: 2024/06/19
+date: 2024-06-19
 logsource:
     product: aws
     service: cloudtrail

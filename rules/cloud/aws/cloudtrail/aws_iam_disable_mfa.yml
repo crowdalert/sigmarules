@@ -3,7 +3,7 @@ id: 0e456158-da62-4f93-bd31-1fcf857c6a20
 status: test
 description: detects defense evasion by disabling MFA for a user
 author: Crowdalert, Inc
-date: 2024/06/19
+date: 2024-06-19
 logsource:
     product: aws
     service: cloudtrail

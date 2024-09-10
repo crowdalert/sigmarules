@@ -5,7 +5,7 @@ description: detects IAM policy allowing access to any resource
 references:
   - https://bishopfox.com/blog/privilege-escalation-in-aws
 author: Crowdalert, Inc
-date: 2024/06/19
+date: 2024-06-19
 tags:
   - attack.t1078.004
   - attack.t1078

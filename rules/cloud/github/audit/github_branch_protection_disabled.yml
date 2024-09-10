@@ -3,9 +3,9 @@ id: e12ab047-ab94-41b7-a50a-de7d40e60636
 status: stable
 description: Detects branch protection rules on a protected repository being disabled by an admin
 author: Crowdalert, Inc
-date: 2024/04/03
+date: 2024-04-03
 tags:
-  - attack.defense_evasion
+  - attack.defense-evasion
   - attack.t1562.001
 logsource:
   product: github

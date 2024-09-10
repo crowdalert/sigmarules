@@ -6,7 +6,7 @@ description: detects login to the AWS console that succeed with password but fai
 references:
   - https://aws.amazon.com/what-is/mfa/
 author: Crowdalert, Inc
-date: 2024/06/19
+date: 2024-06-19
 logsource:
     product: aws
     service: cloudtrail

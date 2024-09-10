@@ -3,7 +3,7 @@ id: 45d3e1ee-8080-4ac0-926d-2fe5185c5434
 status: test
 description: detects registering a new MFA device for a user
 author: Crowdalert, Inc
-date: 2024/06/19
+date: 2024-06-19
 logsource:
     product: aws
     service: cloudtrail

@@ -3,7 +3,7 @@ id: b6192e6d-6b5f-46e2-a1c6-230b8194be45
 status: test
 description: Detects updates to AWS Lambda function code
 author: Crowdalert, Inc
-date: 2024/06/19
+date: 2024-06-19
 logsource:
     product: aws
     service: cloudtrail
